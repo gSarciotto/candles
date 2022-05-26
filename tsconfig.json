@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "checkJs": false,
+        "lib": ["ESNext", "DOM"],
+        "outDir": "dist",
+        "removeComments": true,
+        "target": "ES2018",
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "strict": true,
+        "esModuleInterop": true,
+        "module": "CommonJS",
+    },
+    "include": [
+        "src/**/*",
+        "tests/**/*",
+        "knexfile.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist/**/*",
+    ],
+}
