@@ -15,7 +15,6 @@
     "include": [
         "src/**/*",
         "tests/**/*",
-        "knexfile.ts"
     ],
     "exclude": [
         "node_modules",
