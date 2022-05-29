@@ -1,7 +1,7 @@
 import { Candle } from "./types";
 
 export function createCandleStore() {
-    const store: Record<Candle["symbol"], Candle[]> = {};
+    let store: Record<Candle["symbol"], Candle[]> = {};
 
     // maybe make the methods async or defer to the next node tick so not block event loop?
     function insertCandle(candle: Candle): void {
@@ -24,9 +24,14 @@ export function createCandleStore() {
         candles[candles.length - 1] = updatedLastCandle;
     }
 
+    function resetStore(): void {
+        store = {};
+    }
+
     return {
         insertCandle,
         getStockCandles,
-        updateLastCandleForStock
+        updateLastCandleForStock,
+        resetStore
     };
 }
