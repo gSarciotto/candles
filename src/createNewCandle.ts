@@ -2,6 +2,7 @@ import moment from "moment";
 import { Candle, Tick } from "./types";
 
 export function createNewCandle(firstTick: Tick): Candle {
+    // add candle duration
     return {
         symbol: firstTick.s,
         opening: firstTick.p,
